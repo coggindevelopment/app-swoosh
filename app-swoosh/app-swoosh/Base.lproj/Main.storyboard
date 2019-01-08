@@ -62,6 +62,9 @@
                                 <state key="normal" title="GET STARTED">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="qrN-Yl-dq6" kind="show" id="QdR-5Q-m1c"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -173,9 +176,22 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="glj-cV-FCk">
+                                <rect key="frame" x="20" y="20" width="30" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="3b2-V8-rWv"/>
+                                    <constraint firstAttribute="height" constant="25" id="kKS-gZ-JcK"/>
+                                </constraints>
+                                <state key="normal" image="backButton"/>
+                                <connections>
+                                    <segue destination="bCC-1Y-Rn2" kind="unwind" unwindAction="unwindFromSkillVCWithUnwindSegue:" id="QMZ-9F-tsK"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="glj-cV-FCk" firstAttribute="leading" secondItem="BkQ-c7-GQ2" secondAttribute="leading" constant="20" id="06z-Rm-Noy"/>
+                            <constraint firstItem="glj-cV-FCk" firstAttribute="top" secondItem="BkQ-c7-GQ2" secondAttribute="top" id="2vH-Kb-JOs"/>
                             <constraint firstItem="was-yJ-qLp" firstAttribute="trailing" secondItem="BkQ-c7-GQ2" secondAttribute="trailing" id="3b9-TX-6W2"/>
                             <constraint firstItem="PLP-DB-wKk" firstAttribute="top" secondItem="BkQ-c7-GQ2" secondAttribute="top" constant="20" id="6oV-Rb-4VI"/>
                             <constraint firstItem="PLP-DB-wKk" firstAttribute="centerX" secondItem="JQ2-q5-kXj" secondAttribute="centerX" id="8pD-q7-uaN"/>
@@ -195,6 +211,7 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A3e-eS-ICW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="bCC-1Y-Rn2" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="980" y="132.68365817091455"/>
         </scene>
@@ -291,6 +308,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="backButton" width="29" height="24"/>
         <image name="beginnerBallerBG" width="414" height="736"/>
         <image name="desiredLeagueBG" width="414" height="736"/>
         <image name="swooshLogo" width="119" height="20"/>
